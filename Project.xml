@@ -12,7 +12,7 @@
           <block type="controls_repeat" id="48" inline="true">
             <value name="TIMES">
               <block type="math_number" id="55">
-                <field name="NUM">100</field>
+                <field name="NUM">10</field>
               </block>
             </value>
             <statement name="DO">
@@ -104,7 +104,7 @@
                             </value>
                             <next>
                               <block type="oled_drawtext" id="215">
-                                <field name="TEXT">asdf;ajfpqiejapsfjasfjldsghslkhgoirutiobnlkdbnslhbsidhgoieurhtwioueytibfjkb</field>
+                                <field name="TEXT">asdf;ajfpqiejapsfjasfjlds</field>
                                 <next>
                                   <block type="movement_left" id="79">
                                     <next>
