@@ -1,180 +1,99 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="oled_cleardisplay" id="658" x="-106" y="-176">
+  <block type="oled_cleardisplay" id="794" x="-118" y="-248">
     <next>
-      <block type="variables_set" id="395" inline="true">
-        <field name="VAR">Value</field>
-        <value name="VALUE">
-          <block type="math_number" id="402">
+      <block type="oled_setcursor" id="762" inline="true">
+        <value name="STARTX">
+          <block type="math_number" id="778">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+        <value name="STARTY">
+          <block type="math_number" id="785">
             <field name="NUM">0</field>
           </block>
         </value>
         <next>
-          <block type="controls_repeat" id="48" inline="true">
-            <value name="TIMES">
-              <block type="math_number" id="55">
-                <field name="NUM">10</field>
-              </block>
+          <block type="oled_drawnumber" id="771" inline="true">
+            <value name="NUMBER">
+              <block type="sensor_battery" id="753"></block>
             </value>
-            <statement name="DO">
-              <block type="variables_set" id="99" inline="true">
-                <field name="VAR">Value</field>
-                <value name="VALUE">
-                  <block type="math_arithmetic" id="335" inline="true">
-                    <field name="OP">ADD</field>
-                    <value name="A">
-                      <block type="variables_get" id="339">
-                        <field name="VAR">Value</field>
-                      </block>
-                    </value>
-                    <value name="B">
-                      <block type="math_number" id="346">
-                        <field name="NUM">1</field>
-                      </block>
-                    </value>
-                  </block>
-                </value>
+            <next>
+              <block type="oled_cleardisplay" id="658">
                 <next>
-                  <block type="controls_repeat" id="359" inline="true">
-                    <value name="TIMES">
-                      <block type="variables_get" id="363">
-                        <field name="VAR">Value</field>
+                  <block type="variables_set" id="395" inline="true">
+                    <field name="VAR">Value</field>
+                    <value name="VALUE">
+                      <block type="math_number" id="402">
+                        <field name="NUM">0</field>
                       </block>
                     </value>
-                    <statement name="DO">
-                      <block type="movement_left" id="65">
-                        <next>
-                          <block type="robot_delay" id="67" inline="true">
-                            <value name="DELAY">
-                              <block type="math_number" id="74">
-                                <field name="NUM">2000</field>
-                              </block>
-                            </value>
-                            <next>
-                              <block type="led_select" id="490" inline="true">
-                                <field name="ACTION">ON</field>
-                                <value name="LED">
-                                  <block type="math_number" id="526">
-                                    <field name="NUM">0</field>
-                                  </block>
-                                </value>
-                                <next>
-                                  <block type="led_select" id="506" inline="true">
-                                    <field name="ACTION">ON</field>
-                                    <value name="LED">
-                                      <block type="math_number" id="497">
-                                        <field name="NUM">1</field>
-                                      </block>
-                                    </value>
-                                    <next>
-                                      <block type="led_select" id="535" inline="true">
-                                        <field name="ACTION">ON</field>
-                                        <value name="LED">
-                                          <block type="math_number" id="519">
-                                            <field name="NUM">2</field>
-                                          </block>
-                                        </value>
-                                      </block>
-                                    </next>
-                                  </block>
-                                </next>
-                              </block>
-                            </next>
-                          </block>
-                        </next>
-                      </block>
-                    </statement>
                     <next>
-                      <block type="controls_repeat" id="370" inline="true">
+                      <block type="controls_repeat" id="48" inline="true">
                         <value name="TIMES">
-                          <block type="variables_get" id="113">
-                            <field name="VAR">Value</field>
+                          <block type="math_number" id="55">
+                            <field name="NUM">10</field>
                           </block>
                         </value>
                         <statement name="DO">
-                          <block type="oled_setcursor" id="233" inline="true">
-                            <value name="STARTX">
-                              <block type="math_number" id="240">
-                                <field name="NUM">0</field>
-                              </block>
-                            </value>
-                            <value name="STARTY">
-                              <block type="math_number" id="328">
-                                <field name="NUM">20</field>
-                              </block>
-                            </value>
-                            <next>
-                              <block type="oled_drawtext" id="215">
-                                <field name="TEXT">asdf;ajfpqiejapsfjasfjlds</field>
-                                <next>
-                                  <block type="movement_left" id="79">
-                                    <next>
-                                      <block type="robot_delay" id="80" inline="true">
-                                        <value name="DELAY">
-                                          <block type="math_number" id="81">
-                                            <field name="NUM">2000</field>
-                                          </block>
-                                        </value>
-                                        <next>
-                                          <block type="led_select" id="560" inline="true">
-                                            <field name="ACTION">ON</field>
-                                            <value name="LED">
-                                              <block type="math_number" id="567">
-                                                <field name="NUM">1</field>
-                                              </block>
-                                            </value>
-                                          </block>
-                                        </next>
-                                      </block>
-                                    </next>
-                                  </block>
-                                </next>
-                              </block>
-                            </next>
-                          </block>
-                        </statement>
-                        <next>
-                          <block type="controls_repeat" id="377" inline="true">
-                            <value name="TIMES">
-                              <block type="math_arithmetic" id="384" inline="true">
+                          <block type="variables_set" id="99" inline="true">
+                            <field name="VAR">Value</field>
+                            <value name="VALUE">
+                              <block type="math_arithmetic" id="335" inline="true">
                                 <field name="OP">ADD</field>
                                 <value name="A">
-                                  <block type="variables_get" id="117">
+                                  <block type="variables_get" id="339">
                                     <field name="VAR">Value</field>
                                   </block>
                                 </value>
                                 <value name="B">
-                                  <block type="math_number" id="391">
-                                    <field name="NUM">3</field>
+                                  <block type="math_number" id="346">
+                                    <field name="NUM">1</field>
                                   </block>
                                 </value>
                               </block>
                             </value>
-                            <statement name="DO">
-                              <block type="movement_reverse" id="147">
-                                <next>
-                                  <block type="robot_delay" id="149" inline="true">
-                                    <value name="DELAY">
-                                      <block type="math_number" id="156">
-                                        <field name="NUM">500</field>
-                                      </block>
-                                    </value>
+                            <next>
+                              <block type="controls_repeat" id="359" inline="true">
+                                <value name="TIMES">
+                                  <block type="variables_get" id="363">
+                                    <field name="VAR">Value</field>
+                                  </block>
+                                </value>
+                                <statement name="DO">
+                                  <block type="movement_left" id="65">
                                     <next>
-                                      <block type="movement_left" id="167">
+                                      <block type="robot_delay" id="67" inline="true">
+                                        <value name="DELAY">
+                                          <block type="math_number" id="74">
+                                            <field name="NUM">2000</field>
+                                          </block>
+                                        </value>
                                         <next>
-                                          <block type="robot_delay" id="169" inline="true">
-                                            <value name="DELAY">
-                                              <block type="math_number" id="176">
-                                                <field name="NUM">1000</field>
+                                          <block type="led_select" id="490" inline="true">
+                                            <field name="ACTION">ON</field>
+                                            <value name="LED">
+                                              <block type="math_number" id="526">
+                                                <field name="NUM">0</field>
                                               </block>
                                             </value>
                                             <next>
-                                              <block type="led_select" id="544" inline="true">
-                                                <field name="ACTION">OFF</field>
+                                              <block type="led_select" id="506" inline="true">
+                                                <field name="ACTION">ON</field>
                                                 <value name="LED">
-                                                  <block type="math_number" id="551">
-                                                    <field name="NUM">0</field>
+                                                  <block type="math_number" id="497">
+                                                    <field name="NUM">1</field>
                                                   </block>
                                                 </value>
+                                                <next>
+                                                  <block type="led_select" id="535" inline="true">
+                                                    <field name="ACTION">ON</field>
+                                                    <value name="LED">
+                                                      <block type="math_number" id="519">
+                                                        <field name="NUM">2</field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </next>
                                               </block>
                                             </next>
                                           </block>
@@ -182,59 +101,97 @@
                                       </block>
                                     </next>
                                   </block>
-                                </next>
-                              </block>
-                            </statement>
-                            <next>
-                              <block type="movement_stutter" id="129">
+                                </statement>
                                 <next>
-                                  <block type="robot_delay" id="119" inline="true">
-                                    <value name="DELAY">
-                                      <block type="math_number" id="136">
-                                        <field name="NUM">700</field>
+                                  <block type="controls_repeat" id="370" inline="true">
+                                    <value name="TIMES">
+                                      <block type="variables_get" id="113">
+                                        <field name="VAR">Value</field>
                                       </block>
                                     </value>
+                                    <statement name="DO">
+                                      <block type="oled_setcursor" id="233" inline="true">
+                                        <value name="STARTX">
+                                          <block type="math_number" id="240">
+                                            <field name="NUM">0</field>
+                                          </block>
+                                        </value>
+                                        <value name="STARTY">
+                                          <block type="math_number" id="328">
+                                            <field name="NUM">20</field>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="oled_drawtext" id="215">
+                                            <field name="TEXT">asdf;ajfpqiejapsfjasfjlds</field>
+                                            <next>
+                                              <block type="movement_left" id="79">
+                                                <next>
+                                                  <block type="robot_delay" id="80" inline="true">
+                                                    <value name="DELAY">
+                                                      <block type="math_number" id="81">
+                                                        <field name="NUM">2000</field>
+                                                      </block>
+                                                    </value>
+                                                    <next>
+                                                      <block type="led_select" id="560" inline="true">
+                                                        <field name="ACTION">ON</field>
+                                                        <value name="LED">
+                                                          <block type="math_number" id="567">
+                                                            <field name="NUM">1</field>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </statement>
                                     <next>
-                                      <block type="controls_repeat" id="409" inline="true">
+                                      <block type="controls_repeat" id="377" inline="true">
                                         <value name="TIMES">
-                                          <block type="math_arithmetic" id="416" inline="true">
+                                          <block type="math_arithmetic" id="384" inline="true">
                                             <field name="OP">ADD</field>
                                             <value name="A">
-                                              <block type="variables_get" id="420">
+                                              <block type="variables_get" id="117">
                                                 <field name="VAR">Value</field>
                                               </block>
                                             </value>
                                             <value name="B">
-                                              <block type="math_number" id="427">
-                                                <field name="NUM">4</field>
+                                              <block type="math_number" id="391">
+                                                <field name="NUM">3</field>
                                               </block>
                                             </value>
                                           </block>
                                         </value>
                                         <statement name="DO">
-                                          <block type="movement_forward" id="437">
+                                          <block type="movement_reverse" id="147">
                                             <next>
-                                              <block type="robot_delay" id="439" inline="true">
+                                              <block type="robot_delay" id="149" inline="true">
                                                 <value name="DELAY">
-                                                  <block type="math_number" id="446">
-                                                    <field name="NUM">100</field>
+                                                  <block type="math_number" id="156">
+                                                    <field name="NUM">500</field>
                                                   </block>
                                                 </value>
                                                 <next>
-                                                  <block type="movement_reverse" id="463">
+                                                  <block type="movement_left" id="167">
                                                     <next>
-                                                      <block type="robot_delay" id="465" inline="true">
+                                                      <block type="robot_delay" id="169" inline="true">
                                                         <value name="DELAY">
-                                                          <block type="math_number" id="472">
-                                                            <field name="NUM">100</field>
+                                                          <block type="math_number" id="176">
+                                                            <field name="NUM">1000</field>
                                                           </block>
                                                         </value>
                                                         <next>
-                                                          <block type="led_select" id="585" inline="true">
+                                                          <block type="led_select" id="544" inline="true">
                                                             <field name="ACTION">OFF</field>
                                                             <value name="LED">
-                                                              <block type="math_number" id="592">
-                                                                <field name="NUM">2</field>
+                                                              <block type="math_number" id="551">
+                                                                <field name="NUM">0</field>
                                                               </block>
                                                             </value>
                                                           </block>
@@ -248,7 +205,75 @@
                                           </block>
                                         </statement>
                                         <next>
-                                          <block type="oled_cleardisplay" id="649"></block>
+                                          <block type="movement_stutter" id="129">
+                                            <next>
+                                              <block type="robot_delay" id="119" inline="true">
+                                                <value name="DELAY">
+                                                  <block type="math_number" id="136">
+                                                    <field name="NUM">700</field>
+                                                  </block>
+                                                </value>
+                                                <next>
+                                                  <block type="controls_repeat" id="409" inline="true">
+                                                    <value name="TIMES">
+                                                      <block type="math_arithmetic" id="416" inline="true">
+                                                        <field name="OP">ADD</field>
+                                                        <value name="A">
+                                                          <block type="variables_get" id="420">
+                                                            <field name="VAR">Value</field>
+                                                          </block>
+                                                        </value>
+                                                        <value name="B">
+                                                          <block type="math_number" id="427">
+                                                            <field name="NUM">4</field>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </value>
+                                                    <statement name="DO">
+                                                      <block type="movement_forward" id="437">
+                                                        <next>
+                                                          <block type="robot_delay" id="439" inline="true">
+                                                            <value name="DELAY">
+                                                              <block type="math_number" id="446">
+                                                                <field name="NUM">100</field>
+                                                              </block>
+                                                            </value>
+                                                            <next>
+                                                              <block type="movement_reverse" id="463">
+                                                                <next>
+                                                                  <block type="robot_delay" id="465" inline="true">
+                                                                    <value name="DELAY">
+                                                                      <block type="math_number" id="472">
+                                                                        <field name="NUM">100</field>
+                                                                      </block>
+                                                                    </value>
+                                                                    <next>
+                                                                      <block type="led_select" id="585" inline="true">
+                                                                        <field name="ACTION">OFF</field>
+                                                                        <value name="LED">
+                                                                          <block type="math_number" id="592">
+                                                                            <field name="NUM">2</field>
+                                                                          </block>
+                                                                        </value>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </statement>
+                                                    <next>
+                                                      <block type="oled_cleardisplay" id="649"></block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
                                         </next>
                                       </block>
                                     </next>
@@ -257,15 +282,15 @@
                               </block>
                             </next>
                           </block>
+                        </statement>
+                        <next>
+                          <block type="movement_stop" id="321"></block>
                         </next>
                       </block>
                     </next>
                   </block>
                 </next>
               </block>
-            </statement>
-            <next>
-              <block type="movement_stop" id="321"></block>
             </next>
           </block>
         </next>
