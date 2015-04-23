@@ -9,7 +9,19 @@
       <block type="variables_set" id="99" inline="true">
         <field name="VAR">Value</field>
         <value name="VALUE">
-          <block type="math_random" id="16"></block>
+          <block type="math_arithmetic" id="335" inline="true">
+            <field name="OP">ADD</field>
+            <value name="A">
+              <block type="variables_get" id="339">
+                <field name="VAR">Value</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="346">
+                <field name="NUM">5</field>
+              </block>
+            </value>
+          </block>
         </value>
         <next>
           <block type="controls_whileUntil" id="41" inline="false">
